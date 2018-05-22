@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calc/calc",
+    "pages/history/history",
+    "pages/index/view",
+    "pages/logs/logs",
+    "pages/form/form",
+    "pages/jiaodao/jiaodao",
+    "pages/gfn/gfn"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2e4e7e",
+    "navigationBarTitleText": "疏浚工程计算器",
+    "navigationBarTextStyle": "white"
+  }
+}

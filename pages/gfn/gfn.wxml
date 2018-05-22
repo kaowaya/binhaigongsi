@@ -1,0 +1,254 @@
+<view class="root">
+
+  <form bindsubmit="formSubmit">
+
+    <view class='title'>
+      <p>功率·负荷·扭矩计算</p>
+    </view>
+
+    <view class='table'>
+      <!--    输入数据      -->
+      <view class="section2">
+
+        <input type="text" placeholder="密度t/m3" class="input2 " disabled />
+        <input type="digit" class="input2" placeholder="" maxlength='11' name="gfn_input1" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="流速m/s" class="input2 " disabled />
+        <input type="digit" class="input2" maxlength='11' name="gfn_input2" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="水下泵排压bar" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input3" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="1#泵排压bar" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input4" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="2#泵排压bar" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input5" class="input-top end " />
+
+      </view>
+
+      <view class="section2">
+
+        <input type="text" placeholder="水下与1#高差m" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{moren1}}" maxlength='11' name="gfn_input6" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="1#与2#高差m" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{moren2}}" maxlength='11' name="gfn_input7" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="清水效率" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{moren3}}" maxlength='11' name="gfn_input8" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="扬程系数Kh" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input9" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="功率系数Kn" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input10" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="柴油机额定功率kW" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input11" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="柴油机额定转速rpm" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input12" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="齿轮箱系数" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{moren4}}" maxlength='11' name="gfn_input13" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="流量计管径m" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{moren5}}" maxlength='11' name="gfn_input14" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="1#机转速rpm" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input15" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="2#机转速rpm" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="gfn_input16" class="input-top end " />
+
+      </view>
+    </view>
+
+    <view class='buttonAll'>
+
+      <button class="submitone" formType="submit" size="mini" hover-class='button-hover-class' type='primary'>计算</button>
+
+      <button class="submittwo" formType="reset" size="mini" hover-class='button-hover-class' type='warn'>清零</button>
+
+    </view>
+    <view class='title'>
+      <p>计算结果</p>
+    </view>
+
+    <view class='table'>
+
+      <view class="section2">
+        <input type="text" placeholder="泥浆效率" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output1}}' />
+        <!--    <input type="text" class="input3 end3" disabled name="massSum2" value='{{massSum2}}'/>      -->
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="额定扭矩N.m" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output2}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="1#水功率kw" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output3}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="2#水功率kw" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output4}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="1#轴功率kw" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output5}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="2#轴功率kw" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output6}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="1#实际扭矩N.m" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output7}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="2#实际扭矩N.m" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output8}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="1#负荷%" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output9}}' />
+      </view>
+
+      <view class="section2">
+        <input type="text" placeholder="2#负荷%" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{gfn_output10}}' />
+      </view>
+
+    </view>
+  </form>
+
+  <p>
+    泥泵泥浆扬程和功率\n土质换算系数Kh&Kn：
+  </p>
+   <view class='table'>
+
+    <view class="section2">
+
+      <input type="text" placeholder="土质分类" class="input-top " disabled />
+      <input type="text" placeholder="Kh" class="input-top " disabled />
+      <input type="text" placeholder="Kn" class="input-top end" disabled />
+    </view>
+
+    <view class="section2">
+
+      <input type="text" placeholder="淤泥·粘土·粉土" class="input2 " disabled />
+      <input type="text" placeholder="0.75" class="input2 " disabled />
+      <input type="text" placeholder="1.0" class="input2 end2" disabled />
+
+
+    </view>
+
+    <view class="section2">
+
+      <input type="text" placeholder="中、细沙" class="input2 " disabled />
+      <input type="text" placeholder="0.5" class="input2 " disabled />
+      <input type="text" placeholder="0.8" class="input2 end2" disabled />
+
+
+    </view>
+    <view class="section2">
+
+      <input type="text" placeholder="粗砂、砾石" class="input2 " disabled />
+      <input type="text" placeholder="0.25" class="input2 " disabled />
+      <input type="text" placeholder="0.6" class="input2 end2" disabled />
+
+
+    </view>
+  </view>
+</view>
+<!--    
+    <view class='table'>
+
+      <view class="section-top">
+
+        <input type="text" placeholder="数据" class="input-top " disabled />
+
+        <input type="text" placeholder="A" class="input-top " disabled />
+
+        <input type="text" placeholder="B" class="input-top " disabled />
+
+        <input type="text" placeholder="计算结果" class="input-top end " disabled />
+
+      </view>
+
+      <view class="section2">
+
+        <input type="text" placeholder="加法" class="input2 " disabled />
+
+        <input type="digit" class="input2" placeholder="" maxlength='11' name="massA1" />
+
+        <input type="digit" class="input2" placeholder="" maxlength='11' name="massB1" />
+
+        <input type="text" class="input2 end2" disabled name="massSum1" value='{{massSum1}}' />
+
+      </view>
+
+      <view class="section3">
+
+        <input type="text" placeholder="除法" class="input3 " disabled />
+
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="massA2" />
+
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="massB2" />
+
+        <input type="text" class="input3 end3" disabled name="massSum2" value='{{massSum2}}'/>
+
+      </view>
+            -->

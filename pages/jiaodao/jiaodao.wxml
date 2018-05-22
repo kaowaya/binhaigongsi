@@ -1,0 +1,62 @@
+<view class="root">
+
+  <form bindsubmit="formSubmit">
+
+    <view class='title'>
+      <p>铰刀切片厚度计算</p>
+    </view>
+
+    <view class='table'>
+      <!--    输入数据      -->
+      <view class="section2">
+
+        <input type="text" placeholder="横移速度 (m/min)" class="input2 " disabled />
+        <input type="digit" class="input2" maxlength='11' name="jd_input1" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="铰刀转速  (rpm)" class="input2 " disabled />
+        <input type="digit" class="input2" maxlength='11' name="jd_input2" class="input-top end " />
+
+      </view>
+
+      <view class="section2">
+
+        <input type="text" placeholder="铰刀臂数 (个)" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{bishu}}" maxlength='11' name="jd_input3" class="input-top end " />
+
+      </view>
+
+
+    </view>
+
+    <view class='buttonAll'>
+
+      <button class="submitone" formType="submit" size="mini" hover-class='button-hover-class' type='primary'>计算</button>
+
+      <button class="submittwo" formType="reset" size="mini" hover-class='button-hover-class' type='warn'>清零</button>
+
+    </view>
+   <view class='title' >
+      <p>计算结果</p>
+    </view>
+
+    <view class='table'>
+
+      <view class="section2">
+
+        <input type="text" placeholder="计算切片厚度 (m)" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" disabled name="jd_output" value='{{jd_output}}' />
+
+
+        <!--    <input type="text" class="input3 end3" disabled name="massSum2" value='{{massSum2}}'/>      -->
+
+      </view>
+
+    </view>
+  </form>
+
+
+</view>
+\

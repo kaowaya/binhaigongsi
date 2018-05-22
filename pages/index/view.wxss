@@ -1,0 +1,10 @@
+.info{
+  padding: 40px 5px;
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.url{
+  color: blue;
+}

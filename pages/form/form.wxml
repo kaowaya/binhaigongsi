@@ -1,0 +1,121 @@
+<view class="root">
+
+  <form bindsubmit="formSubmit">
+
+    <view class='title'>
+      <p>缩口换算</p>
+    </view>
+
+    <view class='table'>
+      <!--    输入数据      -->
+      <view class="section2">
+
+        <input type="text" placeholder="缩口系数ξ" class="input2 " disabled />
+        <input type="digit" class="input2" placeholder="{{theta}}" maxlength='11' name="sk_input1" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="管线直径D (m)" class="input2 " disabled />
+        <input type="digit" class="input2" placeholder="{{diameter}}" maxlength='11' name="sk_input2" class="input-top end " />
+
+      </view>
+
+      <view class="section2">
+
+        <input type="text" placeholder="摩阻系数λ" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="{{lambda}}" maxlength='11' name="sk_input3" class="input-top end " />
+
+      </view>
+      <view class="section2">
+
+        <input type="text" placeholder="缩口直径d (m)" class="input2 " disabled />
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="sk_input4" class="input-top end " />
+
+      </view>
+
+    </view>
+
+    <view class='buttonAll'>
+
+      <button class="submitone" formType="submit" size="mini" hover-class='button-hover-class' type='primary'>计算</button>
+
+      <button class="submittwo" formType="reset" size="mini" hover-class='button-hover-class' type='warn'>清零</button>
+
+    </view>
+   <view class='title' >
+      <p>计算结果</p>
+    </view>
+
+    <view class='table'>
+
+      <view class="section2">
+
+        <input type="text" placeholder="计算管线长度L (m)" maxlength='22' class="input2" disabled />
+        <input type="text" class="input3 end3" value='{{sk_output}}' />
+
+
+        <!--    <input type="text" class="input3 end3" disabled name="massSum2" value='{{massSum2}}'/>      -->
+
+      </view>
+
+    </view>
+  </form>
+
+
+  <p>
+    备注：
+  </p>
+
+  <p class='wechat' text-align="center">
+    缩口系数 ξ 取值为0.85-0.95。
+  </p>
+
+  <text> \n </text>
+  <p class='wechat' text-align="center">
+    摩阻系数 λ 取值：
+  </p>
+  <p class='wechat'>
+    当管线直径为700mm时取值为0.013；\n 当管线直径为800mm时取值为0.0125；\n 当管线直径为900mm时取值为0.012。
+  </p>
+</view>
+
+<!--    
+    <view class='table'>
+
+      <view class="section-top">
+
+        <input type="text" placeholder="数据" class="input-top " disabled />
+
+        <input type="text" placeholder="A" class="input-top " disabled />
+
+        <input type="text" placeholder="B" class="input-top " disabled />
+
+        <input type="text" placeholder="计算结果" class="input-top end " disabled />
+
+      </view>
+
+      <view class="section2">
+
+        <input type="text" placeholder="加法" class="input2 " disabled />
+
+        <input type="digit" class="input2" placeholder="" maxlength='11' name="massA1" />
+
+        <input type="digit" class="input2" placeholder="" maxlength='11' name="massB1" />
+
+        <input type="text" class="input2 end2" disabled name="massSum1" value='{{massSum1}}' />
+
+      </view>
+
+      <view class="section3">
+
+        <input type="text" placeholder="除法" class="input3 " disabled />
+
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="massA2" />
+
+        <input type="digit" class="input3" placeholder="" maxlength='11' name="massB2" />
+
+        <input type="text" class="input3 end3" disabled name="massSum2" value='{{massSum2}}'/>
+
+      </view>
+            -->
